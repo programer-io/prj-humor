@@ -3,23 +3,24 @@
 ########################################
 ###
 users =
-  username:       '' # 아이디
-  email:          '' # 이메일
-  service:        ''
-    password:     '' # 패스워드
-    facebook:     {} # 페이스북 로그인 정보
-    kakao:        {} # 카카오톡 로그인 정보
-  profile:        ''
-    name:         '' 사용자 이름
-    bio:          '' 자기소개
-    mobileNo:     '' 휴대번호
-    zipcode:      '' 우편번호
-    address1:     '' 주소
-    address2:     '' 상세주소
-    allowPush:    '' 푸시 수신 여부
-    allowEmail:   '' 이메일 수신 여부
-    allowSms:     '' SMS 수신 여부
-    status:       '' ACTIVE | UNREGISTER | BAN | LOCK | WAIT_FOR_PASSWORD
+  username:           '' # 아이디
+  email:              '' # 이메일
+  service:            ''
+    password:         '' # 패스워드
+    facebook:         {} # 페이스북 로그인 정보
+    kakao:            {} # 카카오톡 로그인 정보
+  profile:            ''
+    name:             '' # 사용자 이름
+    bio:              '' # 자기소개
+    mobileNo:         '' # 휴대번호
+    zipcode:          '' # 우편번호
+    address1:         '' # 주소
+    address2:         '' # 상세주소
+    allowPush:        '' # 푸시 수신 여부
+    allowEmail:       '' # 이메일 수신 여부
+    allowSms:         '' S# MS 수신 여부
+    status:           '' # ACTIVE | UNREGISTER | BAN | LOCK | WAIT_FOR_PASSWORD
+    favoritsFeedList: [] # 보관함 목록 [FEED_ID, FEED_ID,,,]
 ###
 
 ########################################
