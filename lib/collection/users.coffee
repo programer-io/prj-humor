@@ -20,7 +20,6 @@ users =
     allowEmail:       '' # 이메일 수신 여부
     allowSms:         '' S# MS 수신 여부
     status:           '' # ACTIVE | UNREGISTER | BAN | LOCK | WAIT_FOR_PASSWORD
-    favoritsFeedList: [] # 보관함 목록 [FEED_ID, FEED_ID,,,]
 ###
 
 ########################################

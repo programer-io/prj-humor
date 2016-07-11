@@ -2,7 +2,7 @@
 # schema
 ########################################
 ###
-ads =
+adCampaign =
   _id:              ''        # 광고 id
   clientId:         ''        # 광고주 id
   title:            ''        # 광고제목
@@ -14,23 +14,24 @@ ads =
   views:            0         # 노출횟수
   tagList:          ['', ...] # 태그
   createdAt:        Date      # 생성일시
+
 ###
-@Ads = new Mongo.Collection 'ads'
+@AdCampaign = new Mongo.Collection 'adCampaign'
 if Meteor.isServer
-  Ads._ensureIndex({itemCode:1})
-  Ads._ensureIndex({clientCode:1})
-  Ads._ensureIndex({title:1})
-  Ads._ensureIndex({startDatetime:1})
-  Ads._ensureIndex({endDatetime:1})
-  Ads._ensureIndex({status:1})
-  Ads._ensureIndex({views:1})
-  Ads._ensureIndex({tag:1})
+  AdCampaign._ensureIndex({itemCode:1})
+  AdCampaign._ensureIndex({clientCode:1})
+  AdCampaign._ensureIndex({title:1})
+  AdCampaign._ensureIndex({startDatetime:1})
+  AdCampaign._ensureIndex({endDatetime:1})
+  AdCampaign._ensureIndex({status:1})
+  AdCampaign._ensureIndex({views:1})
+  AdCampaign._ensureIndex({tagList:1})
 
 ########################################
 # allow / deny
 ########################################
 if Meteor.isServer
-  Ads.allow
+  AdCampaign.allow
     insert: -> return false
     update: -> return false
     remove: -> return false
@@ -39,8 +40,8 @@ if Meteor.isServer
 # publish
 ########################################
 #if Meteor.isServer
-#  Meteor.publish 'ads', ->
-#    return Ads.find()
+#  Meteor.publish 'adCampaign', ->
+#    return AdCampaign.find()
 
 ########################################
 # method
